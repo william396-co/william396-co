@@ -1,8 +1,8 @@
 #include "util.h"
 using namespace std::chrono;
 
-using day = duration<long,ratio<24 * 60 * 60,1>>;
-using week = duration<long,ratio<24 * 60 * 60 *7,1>>;
+using day = duration<long,std::ratio<24 * 60 * 60,1>>;
+using week = duration<long,std::ratio<24 * 60 * 60 *7,1>>;
 
 time_t now()
 {
@@ -32,8 +32,7 @@ time_t now_week()
 
 uint32_t random(size_t n)
 {
-    srand(now());
-    return static_cast<uint32_t>(double(rand() / RAND_MAX) * n);
+    return static_cast<uint32_t>((double(rand()) / RAND_MAX) * n);
 }
 
 
@@ -60,7 +59,7 @@ std::vector<std::string> StrSplit(const std::string& src, const std::string& sep
 }
 
 
-void shuffle(std::vector<uint32_t> rndVec);
+void shuffle(std::vector<uint32_t> rndVec)
 {
     for(int i = static_cast<int>(rndVec.size() -1); i >= 0;--i)
         std::swap(rndVec[i],rndVec[random(i+1)]);
@@ -81,7 +80,7 @@ uint32_t randomByWeight(const ItemList& list)
                 uint32_t rnd = random(totalWeight);
                 for(auto iter: list)
                 {
-                    if(rnd < iter.weight)
+                    if(rnd < iter.second)
                         return iter.first;
                     else
                         rnd -= iter.second;
@@ -90,7 +89,7 @@ uint32_t randomByWeight(const ItemList& list)
 
         }else
         {
-            return list.begin().first;
+            return list.begin()->first;
         }
     }
     return 0;

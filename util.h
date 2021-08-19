@@ -1,7 +1,9 @@
+#pragma once
 #include <chrono>
 #include <vector>
 #include <string>
 
+using ItemList = std::vector<std::pair<uint32_t,uint32_t>>;
 
 /*  时间相关函数 */
 time_t now();
@@ -12,7 +14,6 @@ time_t now_week();
 
 /*  随机函数 */
 uint32_t random(size_t n);
-using ItemList = std::vector<std::pair<uint32_t,uint32_t>>;
 uint32_t randomByWeight(const ItemList& list);
 
 /* 高德纳洗牌法 */

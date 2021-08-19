@@ -6,6 +6,8 @@ using namespace std;
 
 int main()
 {
+    srand(now());
+
     cout<<now()<<endl;
     cout<<now_ms()<<endl;
     cout<<now_hour()<<endl;

@@ -8,6 +8,9 @@ int main()
 {
     cout<<now()<<endl;
     cout<<now_ms()<<endl;
+    cout<<now_hour()<<endl;
+    cout<<now_day()<<endl;
+    cout<<now_week()<<endl;
 
     for(int i =0;i < 10; ++i)
         cout<<random(10)<<"\t";

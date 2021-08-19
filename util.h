@@ -22,3 +22,5 @@ void shuffle(std::vector<uint32_t> rndVec);
 
 /* 字符串解析函数 */
 std::vector<std::string> StrSplit(const std::string& src, const std::string& sep);
+std::string upper(const std::string& str);
+std::string lower(const std::string& str);

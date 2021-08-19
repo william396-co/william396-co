@@ -18,6 +18,9 @@ int main()
         cout<<random(10)<<"\t";
     cout<<endl;
 
+    cout<<upper("Good morning!")<<endl;
+    cout<<lower("nice to meet you!")<<endl;
+
 
     std::string str="dsadasd/dsada/fdf/aaaa/";
     std::vector<std::string> vec = StrSplit(str,"/");

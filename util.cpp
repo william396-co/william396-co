@@ -58,6 +58,22 @@ std::vector<std::string> StrSplit(const std::string& src, const std::string& sep
     return ret;
 }
 
+std::string upper(const std::string& str)
+{
+    std::string ret;
+    for(auto iter: str)
+        ret += std::toupper(iter);
+    return ret;
+}
+
+std::string lower(const std::string& str)
+{
+    std::string ret;
+    for(auto iter: str)
+        ret += std::tolower(iter);
+    return ret;
+}
+
 
 void shuffle(std::vector<uint32_t> rndVec)
 {

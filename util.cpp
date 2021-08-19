@@ -74,7 +74,7 @@ uint32_t randomByWeight(const ItemList& list)
         {
             uint32_t totalWeight =0;
             for(auto iter: list)
-                totalWeight += iter.weight;
+                totalWeight += iter.second;
 
             if(totalWeight>0)
             {
@@ -82,15 +82,15 @@ uint32_t randomByWeight(const ItemList& list)
                 for(auto iter: list)
                 {
                     if(rnd < iter.weight)
-                        return iter.id;
+                        return iter.first;
                     else
-                        rnd -= iter.weight;
+                        rnd -= iter.second;
                 }
             }
 
         }else
         {
-            return list.begin().id;
+            return list.begin().first;
         }
     }
     return 0;

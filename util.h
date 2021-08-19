@@ -12,12 +12,7 @@ time_t now_week();
 
 /*  随机函数 */
 uint32_t random(size_t n);
-struct Item
-{
-	uint32_t id;
-	uint32_t weight;
-};
-std::vector<Item> ItemList;
+using ItemList = std::vector<std::pair<uint32_t,uint32_t>>;
 uint32_t randomByWeight(const ItemList& list);
 
 /* 高德纳洗牌法 */

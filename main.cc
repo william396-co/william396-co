@@ -13,5 +13,12 @@ int main()
         cout<<random(10)<<"\t";
     cout<<endl;
 
+
+    std::string str="dsadasd/dsada/fdf/aaaa/";
+    std::vector<std::string> vec = StrSplit(str,"/");
+    for(auto iter: vec)
+        cout<<iter<<"\t";
+    cout<<endl;
+
     return 0;
 }

@@ -3,8 +3,20 @@
 
 using namespace std;
 
+void print_point()
+{
+    int num = 100;
+    int* p = &num;
+    cout<<"num="<<num<<endl;
+    cout<<"*p="<<*p<<endl;
+    cout<<"p="<<p<<endl;
+}
+
+
 int main()
 {
+    print_point();
+
     srand(now());
 
     cout<<now()<<endl;

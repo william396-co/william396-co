@@ -1,5 +1,6 @@
 #include <iostream>
 #include "util.h"
+#include "map_test.h"
 
 using namespace std;
 
@@ -15,6 +16,9 @@ void print_point()
 
 int main()
 {
+
+    rvo_test();
+
     print_point();
 
     srand(now());

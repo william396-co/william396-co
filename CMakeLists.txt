@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
 include_directories(${PROJECT_SOURCE_DIR})
-add_executable(mainApp main.cc util.cpp)  # be sure there's exactly one main() function in the source files
+add_executable(mainApp main.cc util.cpp map_test.cpp)  # be sure there's exactly one main() function in the source files

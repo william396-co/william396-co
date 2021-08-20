@@ -3,20 +3,6 @@
 
 using namespace std;
 
-
-struct Goods
-{
-    uint32_t id;
-    uint32_t weight;
-}
-
-void test_emplace()
-{
-    std::vector<Goods> vg;
-    vg.pus_back({1,2});
-}
-
-
 int main()
 {
 

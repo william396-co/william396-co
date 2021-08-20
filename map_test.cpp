@@ -20,3 +20,16 @@ void rvo_test()
     std::vector<int> vo = GetRandList();
     std::cout<<"outter vi address:"<<&vo[0]<<std::endl;
 }
+
+
+int GetRand(size_t n)
+{
+    int ret = random(n);
+    std::cout<<"inner n address:"<<&ret<<std::endl;
+}
+
+void rvo_test2()
+{
+    int rnd = GetRand(10000);
+    std::cout<<"outter n addresss"<<&rnd<<std::endl;
+}

@@ -18,6 +18,7 @@ int main()
 {
 
     rvo_test();
+    rvo_test2();
 
     print_point();
 

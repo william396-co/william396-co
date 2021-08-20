@@ -110,3 +110,11 @@ uint32_t randomByWeight(const ItemList& list)
     }
     return 0;
 }
+
+size_t my_strlen(const char* start)
+{
+    const char* end = start;
+    while(*end !='\0')
+        ++end;        
+    return end - start;
+}

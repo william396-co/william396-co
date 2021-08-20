@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "util.h"
 #include "map_test.h"
 
@@ -16,6 +17,9 @@ void print_point()
 
 int main()
 {
+
+    std::string str1=  "dgodsadlfamlfdsafd";
+    cout<<str1<<" len is "<<my_strlen(str1.c_str())<<endl;
 
     rvo_test();
     rvo_test2();

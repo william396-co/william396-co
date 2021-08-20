@@ -5,9 +5,6 @@ using namespace std;
 
 int main()
 {
-
-    void test_emplace();
-
     srand(now());
 
     cout<<now()<<endl;

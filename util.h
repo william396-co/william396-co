@@ -24,3 +24,5 @@ void shuffle(std::vector<uint32_t> rndVec);
 std::vector<std::string> StrSplit(const std::string& src, const std::string& sep);
 std::string upper(const std::string& str);
 std::string lower(const std::string& str);
+
+size_t my_strlen(const char* start);
